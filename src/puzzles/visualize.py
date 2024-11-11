@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from typing import List
+from typing import List, Optional
 
 def visualize_nqueens(solution: List[int], save_path: Optional[str] = None) -> None:
     """
