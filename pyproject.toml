@@ -5,7 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "click>=8.1.7",
+    "matplotlib>=3.9.2",
     "numpy",
+    "pytest>=8.3.3",
 ]
 
 [build-system]
