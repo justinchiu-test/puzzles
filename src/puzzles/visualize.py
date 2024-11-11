@@ -29,8 +29,9 @@ def visualize_nqueens(solution: List[int], save_path: Optional[str] = None) -> N
     
     plt.grid(True)
     plt.title(f'{n}-Queens Solution')
-    plt.xticks(range(n))
-    plt.yticks(range(n))
+    # Use chess notation for axes
+    plt.xticks(range(n), [chr(ord('a') + i) for i in range(n)])
+    plt.yticks(range(n), [str(i + 1) for i in range(n)])
     
     if save_path:
         plt.savefig(save_path)

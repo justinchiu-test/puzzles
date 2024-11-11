@@ -1,6 +1,7 @@
 import click
 from .nqueens import solve_nqueens
 from .visualize import visualize_nqueens
+from .chess_utils import solution_to_chess_notation
 
 @click.command()
 @click.argument('n', type=int)
@@ -12,7 +13,8 @@ def nqueens(n: int, save: str) -> None:
         click.echo(f"No solution exists for {n}-Queens puzzle")
         return
     
-    click.echo(f"Found solution for {n}-Queens puzzle: {solution}")
+    chess_positions = solution_to_chess_notation(solution)
+    click.echo(f"Found solution for {n}-Queens puzzle: {chess_positions}")
     visualize_nqueens(solution, save)
 
 if __name__ == '__main__':
